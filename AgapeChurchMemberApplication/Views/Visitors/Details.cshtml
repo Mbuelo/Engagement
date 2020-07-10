@@ -1,0 +1,98 @@
+﻿@model AgapeChurchMemberApplication.Models.Visitor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Visitor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorEntryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorEntryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorIDNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorIDNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitorStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitorStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VisitorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

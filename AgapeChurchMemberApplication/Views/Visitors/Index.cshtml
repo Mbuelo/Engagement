@@ -1,0 +1,87 @@
+﻿@model IEnumerable<AgapeChurchMemberApplication.Models.Visitor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorEntryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorIDNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitorStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorEntryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorIDNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitorStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VisitorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VisitorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VisitorId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,25 @@
+﻿
+@{
+
+  ViewBag.Title = "CreateIndividualGroups";
+}
+
+<h2>Assign individuals to group</h2>
+
+<form action="/IndividualGroups/CreateIndividualGroups" method="post">
+
+    Group Name @Html.DropDownList("GroupId", "")
+
+    <ul>
+        @foreach (var individual in ViewBag.Individuals)
+        {
+            <li style="list-style-type:none;">
+                <input type="checkbox" name="IndividualIds" value="@individual.IndividualId" />@individual.IndividualTitle @individual.IndividualName @individual.IndividualLastName
+            </li>
+        }
+    </ul>
+
+    <input type="submit" value="Assign Individual to Group" />
+
+</form>
+

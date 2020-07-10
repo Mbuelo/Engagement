@@ -1,0 +1,105 @@
+﻿@model AgapeChurchMemberApplication.Models.Individual
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div>
+    <h4>Details of <b>@Html.DisplayFor(model => model.IndividualTitle) @Html.DisplayFor(model => model.IndividualLastName)</b></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualEntryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualEntryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualIDNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualIDNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualBaptismalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualBaptismalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndividualStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndividualStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <!-- @Html.ActionLink("Edit", "Edit", new { id = Model.IndividualId }) |-->
+    @Html.ActionLink("Back to List", "Index")
+</p>

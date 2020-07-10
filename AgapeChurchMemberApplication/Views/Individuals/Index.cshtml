@@ -1,0 +1,116 @@
+﻿@model IEnumerable<AgapeChurchMemberApplication.Models.Individual>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CHURCH MEMBERS</h2>
+
+<p>
+    @Html.ActionLink("Add Church Member", "Create")
+</p>
+
+<p>
+    @using (@Html.BeginForm("Index", "Individuals", FormMethod.Get))
+    {
+        <b>Search By:</b>
+        @Html.RadioButton("searchBy", "Name", true) <text>Name</text>
+        @Html.RadioButton("searchBy", "Surname") <text>Surname</text><br />
+        @Html.TextBox("search") <input type="submit" value="search" />
+    }
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualEntryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualIDNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualBaptismalDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndividualStatus)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4">
+                No records match search criteria
+            </td>
+        </tr>
+    }
+    else
+    {
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualEntryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualLastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualIDNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualLanguage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualBaptismalDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndividualStatus)
+                </td>
+                <td>
+                    <!--@Html.ActionLink("Edit", "Edit", new { id = item.IndividualId }) |-->
+                    @Html.ActionLink("Details", "Details", new { id = item.IndividualId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IndividualId })
+                </td>
+            </tr>
+        }
+    }
+
+</table>
